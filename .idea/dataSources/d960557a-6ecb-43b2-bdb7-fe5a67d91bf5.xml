@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Sqlite (Xerial) - data-dev.sqlite">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+    <schema id="1">
+      <visible>1</visible>
+    </schema>
+    <table id="2" parent="1" name="alembic_version"/>
+    <table id="3" parent="1" name="learner_data"/>
+    <table id="4" parent="1" name="predictor_data"/>
+    <table id="5" parent="1" name="temp_info"/>
+    <column id="6" parent="2" name="version_num">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(32)(0,-1)|12</data-type>
+    </column>
+    <column id="7" parent="3" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="8" parent="3" name="name">
+      <data-type>VARCHAR(64)(0,-1)|12</data-type>
+    </column>
+    <column id="9" parent="3" name="path">
+      <data-type>VARCHAR(1000)(0,-1)|12</data-type>
+    </column>
+    <index id="10" parent="3" name="sqlite_autoindex_learner_data_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="11" parent="3" name="sqlite_autoindex_learner_data_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>path</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="12" parent="3">
+      <columns>id)
+unique (name</columns>
+      <primary>1</primary>
+    </key>
+    <column id="13" parent="4" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="14" parent="4" name="name">
+      <data-type>VARCHAR(64)(0,-1)|12</data-type>
+    </column>
+    <column id="15" parent="4" name="path">
+      <data-type>VARCHAR(1000)(0,-1)|12</data-type>
+    </column>
+    <index id="16" parent="4" name="sqlite_autoindex_predictor_data_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>name</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="17" parent="4" name="sqlite_autoindex_predictor_data_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>path</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="18" parent="4">
+      <columns>id)
+unique (name</columns>
+      <primary>1</primary>
+    </key>
+    <column id="19" parent="5" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="20" parent="5" name="track_id">
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="21" parent="5" name="track">
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="22" parent="5" name="label">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(10)(0,-1)|12</data-type>
+    </column>
+    <column id="23" parent="5" name="artist">
+      <data-type>VARCHAR(100)(0,-1)|12</data-type>
+    </column>
+    <column id="24" parent="5" name="path">
+      <data-type>VARCHAR(1000)(0,-1)|12</data-type>
+    </column>
+    <index id="25" parent="5" name="sqlite_autoindex_temp_info_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>track</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="26" parent="5" name="sqlite_autoindex_temp_info_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>artist</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <index id="27" parent="5" name="sqlite_autoindex_temp_info_3">
+      <name-surrogate>1</name-surrogate>
+      <columns>path</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="28" parent="5">
+      <columns>id)
+unique (track</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
